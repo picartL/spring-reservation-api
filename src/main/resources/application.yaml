@@ -1,6 +1,6 @@
 spring:
   application:
-    name: spring-reservation-api
+    name: spring-Reservation-api
   datasource:
     url: jdbc:mariadb://localhost:3306/capgemini
     username: user1
