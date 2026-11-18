@@ -1,4 +1,10 @@
 package com.polytech.polytech.dto;
 
-public class CoordonneesDTO {
-}
+import com.polytech.polytech.entity.Velo;
+
+public record CoordonneesDTO(
+        Long id,
+        String latitude,
+        String longitude,
+        Velo velo
+){}

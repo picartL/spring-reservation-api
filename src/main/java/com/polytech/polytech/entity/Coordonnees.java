@@ -21,6 +21,14 @@ public class Coordonnees
     @JoinColumn(name = "velo_id")
     private Velo velo;
 
+    public Coordonnees(Long id, String latitude, String longitude, Velo velo)
+    {
+        this.id = id;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.velo = velo;
+    }
+
     public Long getId() { return id; }
 
     public void setId(Long id) { this.id = id; }
@@ -32,4 +40,12 @@ public class Coordonnees
     public String getLongitude() { return longitude; }
 
     public void setLongitude(String longitude) { this.longitude = longitude; }
+
+    public Velo getVelo() {
+        return velo;
+    }
+
+    public void setVelo(Velo velo) {
+        this.velo = velo;
+    }
 }

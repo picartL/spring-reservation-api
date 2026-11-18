@@ -25,6 +25,16 @@ public class Velo {
     @OneToMany(mappedBy = "velo")
     private Set<Reservation> reservations = new HashSet<>();
 
+    public Velo(Long id, String nom, int quantite, String description, Set<Coordonnees> coordonnees, Set<Reservation> reservations)
+    {
+        this.id = id;
+        this.nom = nom;
+        this.quantite = quantite;
+        this.description = description;
+        this.coordonnees = coordonnees;
+        this.reservations = reservations;
+    }
+
     public Long getId() { return id; }
 
     public void setId(Long id) { this.id = id; }
@@ -40,4 +50,20 @@ public class Velo {
     public String getDescription() { return description; }
 
     public void setDescription(String description) { this.description = description; }
+
+    public Set<Coordonnees> getCoordonnees() {
+        return coordonnees;
+    }
+
+    public void setCoordonnees(Set<Coordonnees> coordonnees) {
+        this.coordonnees = coordonnees;
+    }
+
+    public Set<Reservation> getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(Set<Reservation> reservations) {
+        this.reservations = reservations;
+    }
 }
